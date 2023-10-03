@@ -1,5 +1,5 @@
 import Hls from "hls.js";
-import {IVideoService} from "./videoService";
+import {IVideoService} from "./typedef";
 
 export class HlsService implements IVideoService<Hls>{
     private hlsInstance:Hls | null = null;

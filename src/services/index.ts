@@ -1,2 +1,2 @@
-export {AbstractVideoService} from "./videoService"
-export {HlsService} from "./hlsService"
+export {IVideoService} from "./typedef"
+export {HlsService} from "./HlsService"
