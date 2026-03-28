@@ -1,0 +1,45 @@
+.overlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: none;
+	bottom: 12%;
+	/* Ниже панели управления и всплывающих меню (см. .controlPanel) */
+	z-index: 2;
+	padding: 0 12px;
+	box-sizing: border-box;
+	pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 4px;
+}
+
+.dragHandle {
+	pointer-events: auto;
+	height: 10px;
+	border-radius: 4px 4px 0 0;
+	background: rgba(255, 255, 255, 0.2);
+	cursor: grab;
+	touch-action: none;
+	flex-shrink: 0;
+}
+
+.dragHandle:active {
+	cursor: grabbing;
+}
+
+.cueText {
+	width: 100%;
+	color: var(--rp-video-cue-color, #fff);
+	background: rgba(0, 0, 0, 0.78);
+	padding: 8px 12px;
+	border-radius: 0 0 6px 6px;
+	font-size: calc(clamp(14px, 2.2vmin, 22px) * var(--subtitle-font-scale, 1));
+	line-height: 1.35;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+	white-space: pre-wrap;
+	word-break: break-word;
+}

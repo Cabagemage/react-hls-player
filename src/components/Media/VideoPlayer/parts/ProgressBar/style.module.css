@@ -1,0 +1,33 @@
+.videoProgressBar {
+	position: relative;
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	height: 7px;
+	background: var(--rp-progress-track, rgba(234, 234, 234, 0.5));
+	z-index: 6;
+}
+
+.hoveredTime {
+	position: absolute;
+	background: var(--rp-hovered-time-bg, #888888);
+	color: var(--rp-hovered-time-text, #000);
+	width: 100px;
+	height: 25px;
+	top: -25px;
+}
+
+.carriage {
+	position: absolute;
+	top: 0;
+	height: 7px;
+	background: var(--rp-progress-played, #338bf2);
+	z-index: 2;
+}
+
+.uploaded {
+	position: absolute;
+	height: 7px;
+	z-index: 1;
+	background: var(--rp-progress-buffered, rgba(234, 234, 234, 0.5));
+}

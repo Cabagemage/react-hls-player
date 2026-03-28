@@ -1,0 +1,51 @@
+.settings {
+	min-width: 127px;
+	animation: popup 0.2s ease;
+	background: var(--rp-settings-bg, #ffffffe6);
+	border-radius: 8px;
+	bottom: 100%;
+	box-shadow: var(--rp-settings-shadow, 0 1px 2px #00000026);
+	font-size: 15px;
+	margin-bottom: 10px;
+	position: absolute;
+	right: 15px;
+	text-align: left;
+	white-space: nowrap;
+	z-index: 3;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.menuItem {
+	width: 100%;
+	display: flex;
+	color: var(--rp-settings-text, #4a5464);
+	padding: 15px;
+	border: transparent;
+}
+
+.settingsHidden {
+	display: none;
+}
+.settingsShow {
+	display: block;
+}
+.submenuHidden {
+	display: none;
+}
+
+.submenuShow {
+	display: block;
+}
+
+@keyframes popup {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

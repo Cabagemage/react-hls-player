@@ -1,0 +1,57 @@
+.volumeRange {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	width: 70px;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+.volumeRange::-webkit-slider-runnable-track {
+	background: var(--rp-volume-track, #dee8ef);
+	height: 0.5rem;
+	border-radius: 20px;
+}
+
+/******** Firefox ********/
+.volumeRange::-moz-range-track {
+	background: var(--rp-volume-track-firefox, #d7e0ea);
+	height: 0.5rem;
+	border-radius: 20px;
+}
+
+.volumeRange::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	margin-top: -4px;
+	margin-left: 0; /* Centers thumb on the track */
+	background-color: var(--rp-volume-thumb-webkit, #676b6b);
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+}
+
+.volumeRange::-moz-range-thumb {
+	border: none; /*Removes extra border that FF applies*/
+	border-radius: 0; /*Removes default border-radius that FF applies*/
+	background-color: var(--rp-volume-thumb-firefox, #cdd6d9);
+	height: 2rem;
+	width: 1rem;
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+.volumeRange:focus {
+	outline: none;
+}
+
+/* Начало трека — справа от ControlBarButton (36px) + зазор; не перекрывать иконку */
+.rangeWrapper {
+	display: flex;
+	position: absolute;
+	left: calc(36px + 8px);
+	top: 50%;
+	transform: translateY(-50%);
+	flex-direction: column;
+	z-index: 26;
+}

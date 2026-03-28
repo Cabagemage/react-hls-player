@@ -1,0 +1,116 @@
+.video {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+button{
+    background-color: transparent;
+}
+.video::cue {
+    color: var(--rp-video-cue-color, white);
+    background-color: var(--rp-video-cue-bg, black);
+    font-size: calc(1.2em * var(--rp-subtitle-font-scale, 1));
+    text-shadow: none;
+}
+
+/* Скрываем нативные cue — текст показывается в перетаскиваемом оверлее */
+.video.videoHideNativeCues::cue {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.controls {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controlsButtons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.videoProgressBarWrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.videoPlayer {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.videoPlayerFullScreen {
+    overflow: hidden;
+    max-width: 100%;
+    height: 100%;
+}
+
+.controlPanel {
+    position: absolute;
+    width: 100%;
+    background: var(--rp-control-panel-bg, rgba(0, 0, 0, 0.5));
+    bottom: 5px;
+    padding-bottom: 10px;
+    /* Выше оверлея субтитров (z-index: 2), чтобы меню настроек/субтитров и слайдер были сверху */
+    z-index: 10;
+}
+
+.videoPlayerFullScreen > .controlPanel {
+    bottom: 0;
+}
+
+.hiddenControlPanel {
+    display: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--rp-list-bg, rgba(0, 0, 0, 0.5));
+    width: 300px;
+}
+
+.button {
+    background-color: transparent;
+}
+
+.volumeContainer {
+    cursor: pointer;
+    position: relative;
+    z-index: 26;
+}
+
+.volumeButton {
+    display: flex;
+    align-items: center;
+}
+
+.soundControl {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.subtitlesWrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,3 +1,10 @@
 node_modules
 dist
+demo/dist
 .idea
+.reference-video-repo
+
+# Локальный HLS для demo/public/tmp-hls-episode/ (не коммитить сегменты)
+demo/public/tmp-hls-episode/*
+!demo/public/tmp-hls-episode/.gitkeep
+!demo/public/tmp-hls-episode/README.txt
